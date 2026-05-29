@@ -1,13 +1,66 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Griglia e Layout Strutturale */
+.site-container {
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Personalizzazione Colori di Bootstrap 5 */
+.btn-primary {
+  background-color: #d65a0d !important;
+  border-color: #d65a0d !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #b54a0a !important;
+  border-color: #b54a0a !important;
+}
+
+/* Valutazioni e Stelle (Integrazione con il componente Rating) */
+.rating span {
+  color: #ffc000;
+}
+
+/* Ottimizzazione Immagini */
+.img-large {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sovrascrittura per miniature del carrello proporzionate */
+.img-thumbnail {
+  height: 80px;
+  width: 80px;
+  object-fit: cover; /* Impedisce lo schiacciamento dell'immagine */
+}
+
+/* Contenitore per form di checkout (Login, Spedizione, Pagamento) */
+.small-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Compatibilità CheckoutSteps alternativo */
+/* Nota: Se usi le classi Bootstrap text-primary e border-primary inserite nell'ultimo aggiornamento, 
+   questo blocco inferiore è facoltativo ma utile come salvagente stilistico */
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #ef6109 !important;
+  color: #ef6109 !important;
 }

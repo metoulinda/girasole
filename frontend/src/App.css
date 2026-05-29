@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
-}
+/* 
+  App.css - Personalizzazioni specifiche per il layout dell'e-commerce Girasole
+  (Tutti gli stili predefiniti di React e del logo ruotante sono stati rimossi)
+*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Forza il contenitore principale a occupare tutta l'altezza dello schermo */
+.site-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Fa in modo che la sezione principale (main) cresca per spingere il footer sempre in fondo */
+main {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Stile personalizzato per i link della navbar per una migliore leggibilità */
+.navbar-brand,
+.nav-link {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Rende più fluide le transizioni sui bottoni arancioni del catalogo */
+.btn {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Ombreggiatura leggera per le card dei prodotti nel catalogo */
+.card {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+/* Effetto zoom opzionale quando l'utente passa il mouse sopra una card prodotto */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
